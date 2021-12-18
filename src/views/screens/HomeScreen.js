@@ -37,12 +37,14 @@ const HomeScreen = ({navigation}) => {
   // ];
   const ListCategories = () => {
     return (
-      <View style={style.categoryContainer}>
+        <View style={style.categoryContainer}>
         {catItems.map((item, index) => (
-          <View key={index} style={style.iconContainer}>
+          <TouchableOpacity  key={index}>
+          <View style={style.iconContainer}>
             {item.icon}
             <Text>{item.name}</Text>
           </View>
+          </TouchableOpacity>
         ))}
       </View>
     );
