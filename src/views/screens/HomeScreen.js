@@ -31,7 +31,7 @@ const HomeScreen = ({navigation}) => {
 ]
   // const categoryIcons = [
   //   <Icon name="flight" size={25} color={COLORS.primary} />,
-  //   <Icon name="beach-access" size={25} colors={COLORS.primary} />,
+  //   <Icon name="beach-access" size={25} color={COLORS.primary} />,
   //   <Icon name="near-me" size={25} color={COLORS.primary} />,
   //   <Icon name="hotel" size={25} color={COLORS.primary} />,
   // ];
