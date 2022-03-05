@@ -90,6 +90,7 @@ const HomeScreen = ({navigation}) => {
 
   const RecommendedCard = ({place}) => {
     return (
+      <TouchableOpacity onPress={() => navigation.navigate('DetailsScreen', place)}>
       <ImageBackground style={style.rmCardImage} source={place.image}>
         <Text
           style={{
@@ -118,11 +119,12 @@ const HomeScreen = ({navigation}) => {
               <Text style={{color: COLORS.white, marginLeft: 5}}>5.0</Text>
             </View>
           </View>
-          <Text style={{color: COLORS.white, fontSize: 13}}>
+          <Text numberOfLines={3} style={{color: COLORS.white, fontSize: 13}}>
             {place.details}
           </Text>
         </View>
       </ImageBackground>
+      </TouchableOpacity>
     );
   };
   return (
