@@ -17,34 +17,19 @@ import COLORS from '../../consts/colors';
 import places from '../../consts/places';
 const {width} = Dimensions.get('screen');
 const HomeScreen = ({navigation}) => {
-
-  const catItems=[{
-    "icon":<Icon name="flight" size={25} color={COLORS.primary} />,
-    "name":"flight"
-  },
-  {"icon":<Icon name="beach-access" size={25} color={COLORS.primary} />,
-  "name":"beach"},
-  {"icon":<Icon name="near-me" size={25} color={COLORS.primary} />,
-  "name":"near-me"},
-  {"icon":<Icon name="hotel" size={25} color={COLORS.primary} />,
-  "name":"Hotels"}
-]
-  // const categoryIcons = [
-  //   <Icon name="flight" size={25} color={COLORS.primary} />,
-  //   <Icon name="beach-access" size={25} color={COLORS.primary} />,
-  //   <Icon name="near-me" size={25} color={COLORS.primary} />,
-  //   <Icon name="hotel" size={25} color={COLORS.primary} />,
-  // ];
+  const categoryIcons = [
+    <Icon name="flight" size={25} color={COLORS.primary} />,
+    <Icon name="beach-access" size={25} color={COLORS.primary} />,
+    <Icon name="near-me" size={25} color={COLORS.primary} />,
+    <Icon name="place" size={25} color={COLORS.primary} />,
+  ];
   const ListCategories = () => {
     return (
-        <View style={style.categoryContainer}>
-        {catItems.map((item, index) => (
-          <TouchableOpacity  key={index}>
-          <View style={style.iconContainer}>
-            {item.icon}
-            <Text>{item.name}</Text>
+      <View style={style.categoryContainer}>
+        {categoryIcons.map((icon, index) => (
+          <View key={index} style={style.iconContainer}>
+            {icon}
           </View>
-          </TouchableOpacity>
         ))}
       </View>
     );
@@ -140,21 +125,16 @@ const HomeScreen = ({navigation}) => {
             paddingHorizontal: 20,
           }}>
           <View style={{flex: 1}}>
-            <Text style={style.headerTitle}>Explore The Beautiful </Text>
-            <Text style={style.headerTitle}> Places of India</Text>
+            <Text style={style.headerTitle}>Explore the</Text>
+            <Text style={style.headerTitle}>beautiful places</Text>
             <View style={style.inputContainer}>
-              <Icon  name="search" size={28} />
-              <TextInput 
+              <Icon name="search" size={28} />
+              <TextInput
                 placeholder="Search place"
-                style={{color:"black",borderWidth:0,width:"80%"}}
+                style={{color: COLORS.grey}}
               />
-              <TouchableOpacity>
-             <Icon style={{margin:15}} name="mic" size={28} />
-             </TouchableOpacity>
             </View>
-            
           </View>
-          
         </View>
         <ListCategories />
         <Text style={style.sectionTitle}>Places</Text>
@@ -204,18 +184,6 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     paddingHorizontal: 20,
     alignItems: 'center',
-    elevation: 12,
-  },
-  inputContainer2: {
-    height: 60,
-    width: '100%',
-    backgroundColor: COLORS.white,
-    borderRadius: 10,
-    position: 'absolute',
-    top: 90,
-    flexDirection: 'row',
-    paddingHorizontal: 20,
-    alignItems: 'flex-end',
     elevation: 12,
   },
   categoryContainer: {

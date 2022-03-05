@@ -21,11 +21,11 @@ const OnBoardScreen = ({navigation}) => {
             Discover
           </Text>
           <Text style={{color: COLORS.white, fontSize: 35, fontWeight: 'bold'}}>
-            India with 'Alexa' 
+            world with us
           </Text>
           <Text style={{color: COLORS.white, lineHeight: 25, marginTop: 15}}>
-            'Welcome to Tourism with Alexa'...ask 'Alexa' to  book your Tour, Hotel ,Taxi
-            etc.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut
+            sem non erat vehicula dignissim. Morbi eget congue ante, feugiat.
           </Text>
           <TouchableOpacity
             activeOpacity={0.8}

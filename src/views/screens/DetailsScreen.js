@@ -7,7 +7,6 @@ import {
   View,
   Text,
 } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../../consts/colors';
 
@@ -18,14 +17,12 @@ const DetailsScreen = ({navigation, route}) => {
       <StatusBar translucent backgroundColor="rgba(0,0,0,0)" />
       <ImageBackground style={{flex: 0.7}} source={place.image}>
         <View style={style.header}>
-        <TouchableOpacity>
           <Icon
             name="arrow-back-ios"
             size={28}
             color={COLORS.white}
             onPress={navigation.goBack}
           />
-          </TouchableOpacity>
           <Icon name="more-vert" size={28} color={COLORS.white} />
         </View>
         <View style={style.imageDetails}>
@@ -89,14 +86,12 @@ const DetailsScreen = ({navigation, route}) => {
             /PER DAY
           </Text>
         </View>
-        <TouchableOpacity>
         <View style={style.bookNowBtn}>
           <Text
             style={{color: COLORS.primary, fontSize: 16, fontWeight: 'bold'}}>
             Book Now
           </Text>
         </View>
-        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
