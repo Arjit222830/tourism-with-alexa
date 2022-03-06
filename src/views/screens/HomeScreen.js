@@ -75,9 +75,7 @@ const HomeScreen = ({navigation}) => {
 
   const RecommendedCard = ({place}) => {
     return (
-      <TouchableOpacity
-        activeOpacity={0.8}
-        onPress={() => navigation.navigate('DetailsScreen', place)}>
+      <TouchableOpacity onPress={() => navigation.navigate('DetailsScreen', place)}>
         <ImageBackground style={style.rmCardImage} source={place.image}>
           <Text
             style={{
@@ -105,12 +103,11 @@ const HomeScreen = ({navigation}) => {
                 <Icon name="star" size={22} color={COLORS.white} />
                 <Text style={{color: COLORS.white, marginLeft: 5}}>5.0</Text>
               </View>
-            </View>
-            <Text numberOfLines={2} ellipsizeMode='tail' style={{color: COLORS.white, fontSize: 13}}>
-              {place.details}
-            </Text>
-          </View>
-        </ImageBackground>
+          <Text numberOfLines={3} style={{color: COLORS.white, fontSize: 13}}>
+            {place.details}
+          </Text>
+        </View>
+      </ImageBackground>
       </TouchableOpacity>
     );
   };
